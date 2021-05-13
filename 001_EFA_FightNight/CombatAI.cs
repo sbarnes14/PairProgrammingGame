@@ -67,7 +67,9 @@ namespace _001_EFA_FightNight
                     case "uppercut":
                         return Punches.Uppercut;
                     default:
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Remember your punches! (j)ab, (h)ook, (u)ppercut");
+                        Console.ResetColor();
                         break;
                 }
             }

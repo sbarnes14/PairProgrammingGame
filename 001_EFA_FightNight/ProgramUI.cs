@@ -110,8 +110,8 @@ namespace _001_EFA_FightNight
             }
 
             Console.Clear();
-            Console.WriteLine();
             Console.WriteLine("Remember your name Rookie?");
+            Console.WriteLine();
             Console.WriteLine();
             currentPlayer.MyName = Console.ReadLine();
             if (currentPlayer.MyName == "")
@@ -149,7 +149,9 @@ namespace _001_EFA_FightNight
                 if (victor == 1)
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"{currentPlayer.MyName} landed a hit on {firstOpponent.OppName}");
+                    Console.ResetColor();
                     Console.WriteLine();
                     Console.WriteLine($"{firstOpponent.OppName}'s Health Remaining {firstOpponent.OppHealth -= 1}");
                     Console.WriteLine();
@@ -160,7 +162,9 @@ namespace _001_EFA_FightNight
                 else if (victor == 2)
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"{firstOpponent.OppName} landed a hit on {currentPlayer.MyName}");
+                    Console.ResetColor();
                     Console.WriteLine();
                     Console.WriteLine($"{firstOpponent.OppName}'s Health Remaining {firstOpponent.OppHealth}");
                     Console.WriteLine();
@@ -171,7 +175,13 @@ namespace _001_EFA_FightNight
                 else
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("Lots of moving air");
+                    Console.ResetColor();
+                    Console.WriteLine();
+                    Console.WriteLine($"{firstOpponent.OppName}'s Health Remaining {firstOpponent.OppHealth}");
+                    Console.WriteLine();
+                    Console.WriteLine($"{currentPlayer.MyName}'s Health Remaining {currentPlayer.MyHealth}");
                     Console.WriteLine();
                 }
 
@@ -183,29 +193,66 @@ namespace _001_EFA_FightNight
                     Console.ResetColor();
                     Console.WriteLine();
                     Console.ReadLine();
-                    Console.WriteLine("Let's get you ready for the next fight!");
 
                     if (firstOpponent.OppName == "Nick")
                     {
+                        Console.WriteLine();
+                        Console.WriteLine("'You can LOOK, but you can't TOUCH MY BEARD... GRAWL!'");
                         firstOpponent = new Opponent("Adam", 1, 3);
+                        Console.Clear();
+                        Console.WriteLine("Announcer - 'Touch gloves and let's get it on'");
+                        Console.WriteLine();
+                        Console.WriteLine($"You touched gloves with {firstOpponent.OppName}, now throw a punch");
+                        Console.WriteLine();
+                        Console.WriteLine("(J)ab , (H)ook , or (U)ppercut");
+                        Console.WriteLine();
                     }
                     else if (firstOpponent.OppName == "Adam")
                     {
+                        Console.WriteLine();
+                        Console.WriteLine("'The fencers cut my INTERNET WIRE... AHHHH!'");
                         firstOpponent = new Opponent("Michael", 1, 4);
+                        Console.Clear();
+                        Console.WriteLine("Announcer - 'Touch gloves and let's get it on'");
+                        Console.WriteLine();
+                        Console.WriteLine($"You touched gloves with {firstOpponent.OppName}, now throw a punch");
+                        Console.WriteLine();
+                        Console.WriteLine("(J)ab , (H)ook , or (U)ppercut");
+                        Console.WriteLine();
                     }
                     else if (firstOpponent.OppName == "Michael")
                     {
+                        Console.WriteLine();
+                        Console.WriteLine("'You could also do it.... THIS WAY!! ...just a suggestion.'");
                         firstOpponent = new Opponent("Jacob", 1, 5);
+                        Console.Clear();
+                        Console.WriteLine("Announcer - 'Touch gloves and let's get it on'");
+                        Console.WriteLine();
+                        Console.WriteLine($"You touched gloves with {firstOpponent.OppName}, now throw a punch");
+                        Console.WriteLine();
+                        Console.WriteLine("(J)ab , (H)ook , or (U)ppercut");
+                        Console.WriteLine();
                     }
                     else if (firstOpponent.OppName == "Jacob")
                     {
+                        Console.WriteLine();
+                        Console.WriteLine("'Nanu nanu weakling, I'm a STAR TREK FAN not a STAR WARS FAN...! '");
                         firstOpponent = new Opponent("Andrew", 1, 6);
+                        Console.Clear();
+                        Console.WriteLine("Announcer - 'Touch gloves and let's get it on'");
+                        Console.WriteLine();
+                        Console.WriteLine($"You touched gloves with {firstOpponent.OppName}, now throw a punch");
+                        Console.WriteLine();
+                        Console.WriteLine("(J)ab , (H)ook , or (U)ppercut");
+                        Console.WriteLine();
                     }
                     else if (firstOpponent.OppName == "Andrew")
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Wow {currentPlayer.MyName}, you should consider yourself lucky to have gotten here! You've taken down EFA's toughest instructors! Congratulations on your victory! Go play the lottery or something because seriously, your luck is insane!");
                         Console.ResetColor();
+                        Console.WriteLine();
+                        Console.WriteLine("If you want to prove yourself again, reset in the main menu and fight again starting with Nick.");
                     }
                     else { }
                 }
@@ -213,14 +260,15 @@ namespace _001_EFA_FightNight
                 else if (currentPlayer.MyHealth <= 0)
                 {
                     Console.Clear();
-                    Console.WriteLine();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"{firstOpponent.OppName} gave you a run for your money! That was some nap you took {currentPlayer.MyName}. Better LUCK next time.");
                     Console.ResetColor();
                     Console.WriteLine();
                     Console.WriteLine($"Stand up {currentPlayer.MyName}! He knocked you down but you're still in this fight!!");
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("'Choose Start Fight To Continue'");
+                    Console.ResetColor();
                     Console.ReadLine();
                 }
 
@@ -315,7 +363,9 @@ namespace _001_EFA_FightNight
                         keepRunnnig = false;
                         break;
                     default:
-                        Console.WriteLine("Please choose a correct option");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Please choose an opponent or return to main menu.");
+                        Console.ResetColor();
                         break;
                 }
             }

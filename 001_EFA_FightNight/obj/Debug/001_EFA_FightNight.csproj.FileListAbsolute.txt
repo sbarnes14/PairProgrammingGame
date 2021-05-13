@@ -1,0 +1,7 @@
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\obj\Debug\001_EFA_FightNight.csprojAssemblyReference.cache
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\obj\Debug\001_EFA_FightNight.csproj.CoreCompileInputs.cache
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\bin\Debug\001_EFA_FightNight.exe.config
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\bin\Debug\001_EFA_FightNight.exe
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\bin\Debug\001_EFA_FightNight.pdb
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\obj\Debug\001_EFA_FightNight.exe
+C:\Users\Stuar\source\repos\001_EFA_FightNight\001_EFA_FightNight\obj\Debug\001_EFA_FightNight.pdb
